@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Who should we contact first? Retention targeting dashboard — Yashika Bhatia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#16181b;--fg:#f2f3f5;--surface:#1f2125;--muted:#a9adb4;--border:#2f3237;--pos:#4fc98a;--neg:#ff7a6b;--acc:#ff5a2b}
+:root[data-theme=light]{--bg:#fff;--fg:#1c1e22;--surface:#f8f9fa;--muted:#6f747c;--border:#e6e8eb;--pos:#1f8a55;--neg:#c8402e;--acc:#e0441a}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font:15px/1.55 "Plus Jakarta Sans",system-ui,sans-serif}
+.page{max-width:72rem;margin:0 auto;padding:28px 24px 60px}
+a{color:inherit}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.top a{font-size:14px;color:var(--muted);text-decoration:none}#theme{width:34px;height:34px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--fg);cursor:pointer}
+h1{font-size:clamp(28px,4.4vw,44px);letter-spacing:-.035em;line-height:1.08;margin:28px 0 10px}
+.lead{color:var(--muted);max-width:52rem}
+.grid{display:grid;grid-template-columns:320px 1fr;gap:22px;margin-top:28px}@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px}
+.card h3{font-size:15px;letter-spacing:-.01em;margin-bottom:12px}
+label{display:block;font-size:13px;color:var(--muted);margin-top:14px}label b{color:var(--fg);float:right}
+input[type=range]{width:100%;accent-color:var(--acc);margin-top:6px}
+.note{font-size:12px;color:var(--muted);margin-top:14px;border-top:1px solid var(--border);padding-top:12px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}@media(max-width:700px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:14px}.kpi b{display:block;font-size:24px;letter-spacing:-.03em}.kpi span{font-size:12px;color:var(--muted)}
+.pos{color:var(--pos)}.neg{color:var(--neg)}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}th,td{text-align:left;padding:8px 6px;border-top:1px solid var(--border)}th{color:var(--muted);font-weight:600;font-size:12px}
+td.r,th.r{text-align:right}.bar{height:8px;border-radius:4px;background:var(--pos)}.bar.n{background:var(--neg)}
+.chip{display:inline-block;border-radius:999px;padding:2px 9px;font-size:11px;font-weight:700}.yes{background:color-mix(in srgb,var(--pos) 20%,transparent);color:var(--pos)}.no{background:color-mix(in srgb,var(--neg) 16%,transparent);color:var(--neg)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}@media(max-width:900px){.row2{grid-template-columns:1fr}}
+.dec{display:flex;align-items:flex-end;gap:8px;height:160px;margin-top:10px;border-bottom:1px solid var(--border);padding-bottom:4px}
+.dec div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px;font-size:11px;color:var(--muted)}
+.dec i{display:block;width:100%;border-radius:6px 6px 0 0;background:var(--muted);opacity:.55}.dec div:first-child i{background:var(--acc);opacity:1}
+.btn{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;background:transparent;color:var(--fg);margin-top:12px}
+ul{padding-left:18px;color:var(--muted)}li{margin:6px 0}li b{color:var(--fg)}
+</style><script>(function(){var t='dark';try{t=localStorage.getItem('theme')||'dark'}catch(e){}document.documentElement.dataset.theme=t})()</script></head>
+<body><div class="page">
+<div class="top"><a href="./../index.html#projects">← Back to portfolio</a><span><a href="https://github.com/yashbh18/analytics-portfolio/tree/main/p7_retention_targeting">SQL on GitHub ↗</a> <button id="theme" aria-label="Toggle theme">☀</button></span></div>
+<h1>Who should we contact first?</h1>
+<p class="lead">A retention-targeting tool built on a propensity scorecard I trained in SQL on real Olist marketplace data (snapshot Sep 2017) and checked on a later period (Mar 2018, 55,524 customers). Move the sliders to see which customer groups a win-back offer pays for, and which it doesn't.</p>
+<div class="grid">
+ <div class="card"><h3>Offer assumptions</h3>
+  <label>Cost per contacted customer <b id="vc"></b><input id="cost" type="range" min="0" max="20" step="0.1" value="0.5"></label>
+  <label>Uplift: extra buyers the offer creates <b id="vu"></b><input id="up" type="range" min="5" max="100" step="5" value="30"></label>
+  <label>Contribution margin on an order <b id="vm"></b><input id="mg" type="range" min="5" max="60" step="1" value="30"></label>
+  <p class="note">Uplift is relative: 30% means the offer turns 30% more of a group's likely buyers into buyers. Incremental profit = customers × score × uplift × AOV × margin − customers × cost. Use a hold-out group to measure real uplift before scaling.</p>
+  <button class="btn" id="dl">Download contact list (CSV)</button>
+ </div>
+ <div>
+  <div class="kpis">
+   <div class="kpi"><b id="k1"></b><span>Customers worth contacting</span></div>
+   <div class="kpi"><b id="k2"></b><span>Extra orders expected</span></div>
+   <div class="kpi"><b id="k3"></b><span>Extra revenue (R$)</span></div>
+   <div class="kpi"><b id="k4"></b><span>Expected profit (R$)</span></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>Customer groups ranked by profit per contact</h3>
+   <table><thead><tr><th>Recency</th><th>Orders</th><th>Spend</th><th class="r">Customers</th><th class="r">Score</th><th class="r">Actual*</th><th class="r">AOV</th><th class="r">Break-even cost</th><th>Profit</th><th>Contact?</th></tr></thead><tbody id="tb"></tbody></table>
+   <p class="note">*Actual = share of the group that really bought again in the next 180 days (backtest). Break-even cost = the most you can spend per contact before the group loses money.</p>
+  </div>
+ </div>
+</div>
+<div class="row2">
+ <div class="card"><h3>Out-of-time validation: actual repeat rate by score decile</h3><div class="dec" id="dec"></div>
+  <p class="note">AUC 0.573 · top decile repeats at 2.0× the average and holds 20% of all repeat buyers. Predicted and actual match in the top decile (2.34% vs 2.34%).</p></div>
+ <div class="card"><h3>What this means</h3><ul>
+  <li><b>Repeat buying is rare and hard to predict</b> on this marketplace (1.2% in 180 days). I tried 3- and 5-feature scorecards; they overfit and validated worse, so the simplest recency × frequency model won.</li>
+  <li><b>The one strong signal is a previous repeat:</b> recent customers with 2+ orders (1.1% of the base) come back 5× more often than the rest.</li>
+  <li><b>Paid discounts don't pay here.</b> With default assumptions, the best group breaks even at about R$1.4 per contact, so only near-free channels (email, push, WhatsApp opt-ins) make money.</li>
+  <li><b>Next step:</b> run the offer on the top two groups with a 20% hold-out to measure true uplift before scaling.</li></ul></div>
+</div>
+<p class="note" style="margin-top:24px">Data: public Olist Brazilian e-commerce dataset. Scorecard, validation and AUC are computed in SQL; see GitHub for the queries.</p>
+</div>
+<script>
+var C=[{"r": "0-90d", "f": "2+ orders", "s": "R$250+", "n": 292, "p": 0.0696, "aov": 230.3, "a": 22}, {"r": "0-90d", "f": "2+ orders", "s": "R$100-250", "n": 290, "p": 0.0696, "aov": 85.3, "a": 13}, {"r": "0-90d", "f": "2+ orders", "s": "<R$100", "n": 50, "p": 0.0696, "aov": 40.9, "a": 1}, {"r": "91-180d", "f": "2+ orders", "s": "R$250+", "n": 204, "p": 0.0176, "aov": 226.2, "a": 11}, {"r": "91-180d", "f": "2+ orders", "s": "R$100-250", "n": 218, "p": 0.0176, "aov": 80.4, "a": 7}, {"r": "91-180d", "f": "2+ orders", "s": "<R$100", "n": 43, "p": 0.0176, "aov": 38.9, "a": 4}, {"r": "0-90d", "f": "1 order", "s": "R$250+", "n": 2308, "p": 0.0174, "aov": 482.5, "a": 26}, {"r": "0-90d", "f": "1 order", "s": "R$100-250", "n": 7196, "p": 0.0174, "aov": 155.2, "a": 105}, {"r": "0-90d", "f": "1 order", "s": "<R$100", "n": 8630, "p": 0.0174, "aov": 59.4, "a": 117}, {"r": "91-180d", "f": "1 order", "s": "R$250+", "n": 2162, "p": 0.0144, "aov": 528.5, "a": 17}, {"r": "91-180d", "f": "1 order", "s": "R$100-250", "n": 5609, "p": 0.0144, "aov": 154.7, "a": 61}, {"r": "91-180d", "f": "1 order", "s": "<R$100", "n": 7067, "p": 0.0144, "aov": 60.8, "a": 68}, {"r": "181d+", "f": "1 order", "s": "R$250+", "n": 2842, "p": 0.0112, "aov": 529.8, "a": 18}, {"r": "181d+", "f": "1 order", "s": "R$100-250", "n": 7917, "p": 0.0112, "aov": 154.7, "a": 77}, {"r": "181d+", "f": "1 order", "s": "<R$100", "n": 10170, "p": 0.0112, "aov": 60.0, "a": 96}, {"r": "181d+", "f": "2+ orders", "s": "R$250+", "n": 201, "p": 0.0075, "aov": 250.9, "a": 6}, {"r": "181d+", "f": "2+ orders", "s": "R$100-250", "n": 253, "p": 0.0075, "aov": 84.1, "a": 4}, {"r": "181d+", "f": "2+ orders", "s": "<R$100", "n": 72, "p": 0.0075, "aov": 36.5, "a": 0}],D=[[1.0, 2.34, 2.34], [2.0, 1.74, 1.37], [3.0, 1.74, 1.44], [4.0, 1.58, 0.68], [5.0, 1.44, 1.12], [6.0, 1.44, 1.01], [7.0, 1.16, 0.97], [8.0, 1.12, 1.19], [9.0, 1.12, 0.83], [10.0, 1.08, 0.81]];
+var $=function(i){return document.getElementById(i)};
+function fmt(n){return Math.round(n).toLocaleString('en-IN')}
+function calc(){var cost=+$('cost').value,up=+$('up').value/100,mg=+$('mg').value/100;$('vc').textContent='R$'+cost.toFixed(2);$('vu').textContent=Math.round(up*100)+'%';$('vm').textContent=Math.round(mg*100)+'%';
+ var rows=C.map(function(c){var pc=c.p*up*c.aov*mg-cost;return Object.assign({},c,{pc:pc,be:c.p*up*c.aov*mg,profit:pc*c.n,inc:c.n*c.p*up})}).sort(function(a,b){return b.pc-a.pc});
+ var go=rows.filter(function(r){return r.pc>0}),cust=0,inc=0,rev=0,pr=0;go.forEach(function(r){cust+=r.n;inc+=r.inc;rev+=r.inc*r.aov;pr+=r.profit});
+ $('k1').textContent=fmt(cust);$('k2').textContent=fmt(inc);$('k3').textContent=fmt(rev);$('k4').textContent=(pr>0?'+':'')+fmt(pr);$('k4').className=pr>0?'pos':'';
+ var mx=Math.max.apply(null,rows.map(function(r){return Math.abs(r.profit)}))||1;
+ $('tb').innerHTML=rows.map(function(r){var w=Math.max(2,Math.abs(r.profit)/mx*100);return '<tr><td>'+r.r+'</td><td>'+r.f+'</td><td>'+r.s+'</td><td class="r">'+fmt(r.n)+'</td><td class="r">'+(r.p*100).toFixed(1)+'%</td><td class="r">'+(r.a/r.n*100).toFixed(1)+'%</td><td class="r">R$'+fmt(r.aov)+'</td><td class="r">R$'+r.be.toFixed(2)+'</td><td style="width:16%"><div class="bar'+(r.profit<0?' n':'')+'" style="width:'+w+'%"></div></td><td><span class="chip '+(r.pc>0?'yes':'no')+'">'+(r.pc>0?'Yes':'No')+'</span></td></tr>'}).join('');
+ window.__rows=rows}
+['cost','up','mg'].forEach(function(i){$(i).addEventListener('input',calc)});calc();
+var mxd=Math.max.apply(null,D.map(function(d){return d[2]}));$('dec').innerHTML=D.map(function(d){return '<div><span>'+d[2].toFixed(1)+'%</span><i style="height:'+(d[2]/mxd*120)+'px"></i><span>D'+d[0]+'</span></div>'}).join('');
+$('dl').onclick=function(){var s='recency,orders,spend,customers,score,aov,profit_per_contact,contact\n'+window.__rows.map(function(r){return [r.r,r.f,r.s,r.n,r.p.toFixed(4),r.aov,r.pc.toFixed(2),r.pc>0?'yes':'no'].join(',')}).join('\n');var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([s],{type:'text/csv'}));a.download='contact_list.csv';a.click()};
+var tb=$('theme');function ic(){tb.textContent=document.documentElement.dataset.theme==='light'?'☾':'☀'}ic();tb.onclick=function(){var r=document.documentElement;r.dataset.theme=r.dataset.theme==='light'?'dark':'light';ic();try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}};
+</script></body></html>
