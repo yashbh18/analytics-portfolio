@@ -1,0 +1,7 @@
+segment,customers,pct_customers,revenue_brl,pct_revenue,avg_spend_brl,avg_recency_days
+At-risk high-value,20700,22.2,6176192.0,40.0,298.4,336.0
+New high-value,14404,15.4,4353221.0,28.2,302.2,92.0
+Hibernating low-value,33717,36.1,2443482.0,15.8,72.5,338.0
+New low-value,21735,23.3,1585210.0,10.3,72.9,90.0
+Loyal repeaters,1805,1.9,571585.0,3.7,316.7,132.0
+Lapsed repeaters,996,1.1,292772.0,1.9,293.9,382.0
