@@ -1,0 +1,7 @@
+recency_band,frequency_band,train_customers,train_repeaters,score_pct
+1 0-90d,2+ orders,321,25,6.96
+2 91-180d,2+ orders,167,3,1.76
+1 0-90d,1 order,10384,181,1.74
+2 91-180d,1 order,7933,114,1.44
+3 181d+,1 order,2800,31,1.12
+3 181d+,2+ orders,59,0,0.75

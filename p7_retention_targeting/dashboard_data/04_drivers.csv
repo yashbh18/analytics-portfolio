@@ -1,0 +1,15 @@
+feature,band,customers,repeat_pct
+Recency,1 0-90d,18766,1.51
+Recency,2 91-180d,15303,1.1
+Recency,3 181d+,21455,0.94
+Frequency,1 order,53901,1.09
+Frequency,2+ orders,1623,4.19
+Spend,1 <R$100,26032,1.1
+Spend,2 R$100-250,21483,1.24
+Spend,3 R$250+,8009,1.25
+Last review,1-2 stars,7269,1.06
+Last review,3 stars,4800,1.0
+Last review,4-5 stars,43036,1.22
+Last review,no review,419,0.24
+Last delivery,late,4287,1.12
+Last delivery,on time,51237,1.18
