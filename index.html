@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Yashika Bhatia — Product & Data Analyst</title>
-<meta name="description" content="Product & Data Analyst in Delhi NCR. Funnel, growth and experimentation analytics. Case studies and SQL projects.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yashika Bhatia — Product &amp; Data Analyst</title>
+<meta name="description" content="Product & Data Analyst in Delhi NCR. Funnel, growth and experimentation analytics: projects and case studies.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script>(function(){var t=null;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
 <style>
-:root{--bg:#121212;--panel:#1a1a1a;--ink:#efebe6;--mute:#9a948e;--line:#2a2a2a;--acc:#ff5a2b;--acc2:#ffb199}
+:root{--bg:#121212;--panel:#1a1a1a;--ink:#efebe6;--body:#d6d1cb;--mute:#9a948e;--line:#2a2a2a;--acc:#ff5a2b;--acc2:#ffb199;--navbg:rgba(18,18,18,.86)}
+:root[data-theme=light]{--bg:#f7f4ef;--panel:#ffffff;--ink:#141414;--body:#3a3836;--mute:#6f6a64;--line:#e2ddd6;--acc:#e0441a;--acc2:#b8360f;--navbg:rgba(247,244,239,.88)}
 *{box-sizing:border-box;margin:0;padding:0;min-width:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font:16px/1.6 Archivo,system-ui,sans-serif;overflow-x:clip}
@@ -16,7 +17,7 @@ a{color:inherit}
 .mono{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 /* nav */
-header.nav{position:sticky;top:0;z-index:10;background:rgba(18,18,18,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.nav{position:sticky;top:0;z-index:10;background:var(--navbg);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
 .brand{display:flex;gap:8px;align-items:center;font-weight:700;font-size:14px;text-decoration:none}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px rgba(255,90,43,.15)}
@@ -31,7 +32,7 @@ nav a{text-decoration:none;color:var(--mute);margin-left:22px}nav a:hover{color:
 .hero h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--ink);opacity:.85}
 .roles{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 22px}
 .roles span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--acc2)}
-.lede{max-width:640px;font-size:19px;color:#d6d1cb}
+.lede{max-width:640px;font-size:19px;color:var(--body)}
 /* ticker */
 .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0;margin-top:46px}
 .ticker div{display:inline-block;animation:tick 38s linear infinite;font-weight:700;font-size:22px}
@@ -45,7 +46,7 @@ section{padding:84px 0;border-bottom:1px solid var(--line)}
 .sec-h h2{font-weight:900;font-size:clamp(34px,5vw,54px);letter-spacing:-.02em;line-height:1}
 .sub{color:var(--mute);max-width:700px;margin:-18px 0 34px}
 .about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
-.about p{font-size:18px;color:#d6d1cb;margin-bottom:16px}
+.about p{font-size:18px;color:var(--body);margin-bottom:16px}
 .about p b{color:var(--ink)}
 .facts{border-top:1px solid var(--line)}
 .facts div{display:grid;grid-template-columns:130px 1fr;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
@@ -70,7 +71,7 @@ section{padding:84px 0;border-bottom:1px solid var(--line)}
 .case .body{padding:0 26px 28px 104px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .case[open] summary{border-bottom:1px solid var(--line);margin-bottom:24px}
 .case h4{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc2);margin-bottom:8px}
-.case ul{padding-left:18px}.case li{margin:6px 0;color:#d6d1cb}
+.case ul{padding-left:18px}.case li{margin:6px 0;color:var(--body)}
 .case li b{color:var(--ink)}
 .case .full{grid-column:1/-1}
 .plus{font-size:26px;color:var(--mute);transition:transform .2s}
@@ -85,7 +86,7 @@ section{padding:84px 0;border-bottom:1px solid var(--line)}
 .proj .in{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .proj .meta{display:flex;justify-content:space-between;color:var(--mute)}
 .proj h3{font-size:21px;line-height:1.25}
-.proj p{color:#cfc9c3;font-size:15px}
+.proj p{color:var(--body);font-size:15px}
 .proj .res{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--acc2)}
 .badge{display:inline-block;background:rgba(255,90,43,.15);color:var(--acc);border-radius:3px;padding:2px 8px;font-size:11px}
 @media(max-width:820px){.grid{grid-template-columns:1fr}}
@@ -93,7 +94,7 @@ section{padding:84px 0;border-bottom:1px solid var(--line)}
 .job{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:28px 0;border-top:1px solid var(--line)}
 .job .when{color:var(--mute)}
 .job h3{font-size:22px}.job .co{color:var(--acc2);margin-bottom:10px}
-.job ul{padding-left:18px;color:#d6d1cb}.job li{margin:6px 0}
+.job ul{padding-left:18px;color:var(--body)}.job li{margin:6px 0}
 .job .stack{color:var(--mute);font-size:14px;margin-top:10px}
 @media(max-width:760px){.job{grid-template-columns:1fr;gap:8px}}
 /* toolkit */
@@ -108,23 +109,40 @@ section{padding:84px 0;border-bottom:1px solid var(--line)}
 /* contact */
 .contact h2{font-weight:900;font-size:clamp(56px,10vw,128px);line-height:.9;letter-spacing:-.04em}
 .contact h2 span{color:var(--acc)}
-.contact p{max-width:560px;color:#d6d1cb;font-size:18px;margin:26px 0}
+.contact p{max-width:560px;color:var(--body);font-size:18px;margin:26px 0}
 .links{display:flex;flex-wrap:wrap;gap:12px}
 .links a{border:1px solid var(--line);padding:14px 20px;border-radius:999px;text-decoration:none;font-weight:700}
 .links a:hover{border-color:var(--acc);color:var(--acc)}
 footer{padding:28px 0;color:var(--mute)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+body{transition:background .2s,color .2s}
+.navr{display:flex;align-items:center;gap:6px}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer;margin-left:18px}
+#theme:hover{border-color:var(--acc);color:var(--acc)}
+:root[data-theme=light] #theme .sun,:root:not([data-theme=light]) #theme .moon{display:none}
+.case .kind{color:var(--mute);margin-bottom:6px;font-size:11px}
+.case p{color:var(--body)}
+.case .mt{margin-top:18px}
+.figs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.figs figure{background:#fff;border:1px solid var(--line);border-radius:4px;padding:8px}
+.figs img{width:100%;height:auto;display:block}
+.figs figcaption{font-size:12px;color:#555;padding:6px 2px 0}
+.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:999px}
+.btn:hover{filter:brightness(1.1)}
+@media(max-width:820px){.figs{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(34px,5vw,54px);letter-spacing:-.02em;line-height:1}
 </style>
 </head>
 <body>
 <header class="nav"><div class="wrap">
   <a class="brand" href="#top"><span class="dot"></span>Yashika Bhatia</a>
-  <nav class="mono"><a href="#about">About</a><a href="#cases">Case studies</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+  <div class="navr"><nav class="mono"><a href="#about">About</a><a href="#projects">Projects</a><a href="#cases">Case studies</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+  <button id="theme" class="mono" aria-label="Toggle light or dark mode"><span class="sun">☀ Light</span><span class="moon">☾ Dark</span></button></div>
 </div></header>
-
 <main id="top">
 <div class="wrap">
-  <div class="status mono"><span class="live">Open to analyst roles · immediate joiner</span><span>Delhi NCR · <span id="clock">IST</span></span></div>
+  <div class="status mono"><span class="live">Open to analyst roles</span><span>Delhi NCR · <span id="clock">IST</span></span></div>
   <div class="hero">
     <div class="kicker mono">Product · Growth · Decision analytics</div>
     <h1>Yashika<span>Bhatia</span></h1>
@@ -132,10 +150,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <p class="lede">I find where a product is leaking revenue, work out why, and turn it into a change the team can test. Currently a Product / Data Analyst at Times Internet (The Economic Times).</p>
   </div>
 </div>
-<div class="ticker" aria-hidden="true"><div>
-  SQL<i>✳</i>BigQuery<i>✳</i>GA4<i>✳</i>Funnel analysis<i>✳</i>A/B testing<i>✳</i>Root-cause analysis<i>✳</i>Power BI<i>✳</i>Looker Studio<i>✳</i>Meta &amp; Google Ads<i>✳</i>Propensity scoring<i>✳</i>Pricing<i>✳</i>Excel<i>✳</i>
-  SQL<i>✳</i>BigQuery<i>✳</i>GA4<i>✳</i>Funnel analysis<i>✳</i>A/B testing<i>✳</i>Root-cause analysis<i>✳</i>Power BI<i>✳</i>Looker Studio<i>✳</i>Meta &amp; Google Ads<i>✳</i>Propensity scoring<i>✳</i>Pricing<i>✳</i>Excel<i>✳</i>
-</div></div>
+<div class="ticker" aria-hidden="true"><div>SQL<i>✳</i>BigQuery<i>✳</i>GA4<i>✳</i>Funnel analysis<i>✳</i>A/B testing<i>✳</i>Root-cause analysis<i>✳</i>Power BI<i>✳</i>Looker Studio<i>✳</i>Meta &amp; Google Ads<i>✳</i>Propensity scoring<i>✳</i>Pricing<i>✳</i>Excel<i>✳</i>SQL<i>✳</i>BigQuery<i>✳</i>GA4<i>✳</i>Funnel analysis<i>✳</i>A/B testing<i>✳</i>Root-cause analysis<i>✳</i>Power BI<i>✳</i>Looker Studio<i>✳</i>Meta &amp; Google Ads<i>✳</i>Propensity scoring<i>✳</i>Pricing<i>✳</i>Excel<i>✳</i></div></div>
 
 <section id="about"><div class="wrap">
   <div class="sec-h"><span class="num mono">01</span><h2>About</h2></div>
@@ -152,7 +167,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <div><dt class="mono">Core stack</dt><dd>SQL · BigQuery · GA4 · Power BI / Looker</dd></div>
       <div><dt class="mono">Experience</dt><dd>2.5+ years</dd></div>
       <div><dt class="mono">Education</dt><dd>BSc Physical Science, Gargi College (DU) · 9.13/10</dd></div>
-      <div><dt class="mono">Based in</dt><dd>Delhi NCR · immediate joiner</dd></div>
+      <div><dt class="mono">Based in</dt><dd>Delhi NCR, India</dd></div>
     </dl>
   </div>
   <div class="strip">
@@ -163,89 +178,86 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   </div>
 </div></section>
 
-<section id="cases"><div class="wrap">
-  <div class="sec-h"><span class="num mono">02</span><h2>Work case studies</h2></div>
-  <p class="sub">Real problems from my current role. The product is anonymised and internal numbers are rounded; the approach and outcomes are mine.</p>
-
+<section id="projects"><div class="wrap">
+  <div class="sec-h"><span class="num mono">02</span><h2>Selected projects</h2></div>
+  <p class="sub">Self-initiated analyses on public or clearly labelled simulated data. Open any project for the problem, data, approach, findings, impact and charts. All queries and outputs are on <a href="https://github.com/yashbh18/analytics-portfolio">GitHub</a>.</p>
   <details class="case" open>
-    <summary><span class="idx">C/01</span><div><h3>Selling more tickets for city running events</h3><div class="tags">Funnel analysis · A/B testing · referral design · city strategy · new revenue streams</div></div><div class="big"><b>+10%</b><span>landing → registration</span></div><span class="plus">+</span></summary>
-    <div class="body">
-      <div><h4>Problem</h4><ul><li>Ticket sales for running events in <b>4 metro cities</b> needed to grow, and conversion from landing to registration was low.</li><li>Paid ads were spending heavily without a clear view of which were working.</li></ul></div>
-      <div><h4>What I did</h4><ul><li>Mapped the full funnel and found the friction: a <b>long registration form, extra details asked too early and a clunky UI flow</b>.</li><li>Proposed a shorter, simpler flow and ran it as an <b>A/B test</b>.</li><li>Noticed most runners sign up <b>in groups</b>, so I designed a <b>referral plan</b> with a ticket-upgrade reward.</li><li>Analysed Meta and Google ads: <b>paused high-spend, low-return ads</b> and turned patterns from the winners into creative changes.</li><li>Investigated <b>payment-gateway failures</b> in the checkout funnel.</li><li>Built a <b>business dashboard</b> with daily updates and city-specific strategies and tests.</li></ul></div>
-      <div class="full"><h4>Impact</h4><ul><li><b>+10% landing-to-registration conversion</b> from the simplified flow, lifting total revenue.</li><li>The referral plan drove <b>more group registrations and revenue</b>.</li><li>Opened new revenue streams beyond tickets: <b>stalls, corporate tickets and sponsorships</b>.</li><li>Less ad spend wasted on poor performers.</li></ul></div>
-    </div>
-  </details>
-
-  <details class="case">
-    <summary><span class="idx">C/02</span><div><h3>Growing online yoga subscriptions</h3><div class="tags">Page &amp; funnel redesign · pricing · international expansion</div></div><div class="big"><b>+5%</b><span>funnel conversion</span></div><span class="plus">+</span></summary>
-    <div class="body">
-      <div><h4>Problem</h4><ul><li>Online yoga classes sold as 1-month, 3-month and 1-year plans. The goal was more subscriptions and more revenue.</li><li>Users only saw plans and prices <b>after</b> submitting a lead form, so many dropped off before seeing the value.</li></ul></div>
-      <div><h4>What I did</h4><ul><li>Analysed the funnel step by step and proposed showing <b>plans directly on the page</b>, before the lead form.</li><li>Proposed selling yoga plans to an <b>international audience at a higher price point</b>.</li></ul></div>
-      <div class="full"><h4>Impact</h4><ul><li><b>+5% conversion</b> after moving plans ahead of the lead form.</li><li>International pricing added a <b>higher-AOV revenue stream</b>.</li></ul></div>
-    </div>
-  </details>
-
-  <details class="case">
-    <summary><span class="idx">C/03</span><div><h3>Building trust and new markets for diet plans</h3><div class="tags">Lead generation · go-to-market · international pricing</div></div><div class="big"><b>50%+</b><span>net GTV growth</span></div><span class="plus">+</span></summary>
-    <div class="body">
-      <div><h4>Problem</h4><ul><li>Dietitian-led diet plans (consultation call plus 1/3/6/12-month plans). The brand was new and unknown, so trust and leads were the bottleneck.</li></ul></div>
-      <div><h4>What I did</h4><ul><li>Proposed <b>free webinars</b> to generate leads, build trust and then sell plans.</li><li>Proposed launching <b>online diet plans in international markets</b> such as the UAE and Singapore at higher rates.</li></ul></div>
-      <div class="full"><h4>Impact</h4><ul><li>Webinars generated <b>₹5 lakh in revenue</b>.</li><li>International plans grew the business by <b>more than 50% in net GTV</b>.</li></ul></div>
-    </div>
-  </details>
-
-  <details class="case">
-    <summary><span class="idx">C/04</span><div><h3>Targeting the right users with a propensity model</h3><div class="tags">Propensity scoring · segmentation · marketing efficiency · payment RCA</div></div><div class="big"><b>₹40L+</b><span>revenue impact (all RCAs)</span></div><span class="plus">+</span></summary>
-    <div class="body">
-      <div><h4>Problem</h4><ul><li>Marketing and CRM effort was spread evenly across users, and revenue was leaking at payment.</li></ul></div>
-      <div><h4>What I did</h4><ul><li>Built a <b>propensity model</b> to score users on how likely they were to buy, so campaigns could focus on the highest-intent users.</li><li>Ran root-cause analyses on <b>payment failures and funnel drop-offs</b> across products, channels and segments.</li></ul></div>
-      <div class="full"><h4>Impact</h4><ul><li>Root-cause fixes across the funnel and payments delivered <b>₹40L+ revenue impact</b>.</li></ul></div>
-    </div>
-  </details>
+<summary><span class="idx">P/01</span><div><div class="kind mono">Real data · SQL</div><h3>What wins on Indian business-news YouTube? ET vs 5 peers</h3><div class="tags">Data collection · SQL window functions · outlier-robust metrics · competitive benchmarking · content strategy</div></div><div class="big"><b>+1.1M</b><span>views / month opportunity</span></div><span class="plus">+</span></summary>
+<div class="body">
+<div><h4>Problem</h4><p>ET's YouTube team has limited editing capacity. Which formats, topics, video lengths and title styles actually win reach, and where is ET behind its competitors?</p></div>
+<div><h4>Data</h4><p>1,860 recent uploads (long-form and Shorts) I collected from the public YouTube pages of The Economic Times, Moneycontrol, CNBC-TV18, Business Today, Mint and NDTV Profit on 18 Nov 2026: views, likes, comments, duration and publish time. Videos under 24 hours old were excluded.</p></div>
+<div class="full"><h4>Approach</h4><ul><li>Converted publish times to IST and tagged every video by topic and title features with SQL CASE logic.</li><li>Built a <b>performance index</b> (views ÷ the same channel's median for that format) so channels of different sizes compare fairly.</li><li>Used <b>breakout rate</b> (share of videos at 2×+ the channel median) instead of averages, because a few viral videos (one at 1,000× median) distort any mean.</li><li>Cut results by format, length, topic, title features and hour, then benchmarked ET against the peer average.</li></ul></div>
+<div><h4>Key findings</h4><ul><li>ET posts <b>~1 Short a week vs 41–300 a week</b> at peers, yet its Shorts get a median 7.3K views, <b>1.7× its own long-form</b>.</li><li>Shorts bring <b>38–61% of views</b> for NDTV Profit and CNBC-TV18, but only 18% for ET.</li><li>ET has the <b>highest engagement</b> of the six channels: 1.6% on long-form vs 0.4–0.6% for peers.</li><li>Geopolitics is <b>35% of all uploads</b> but under-performs markets, personal finance and Indian politics.</li><li>10–30 minute videos break out 39% of the time vs 24% for clips under 3 minutes; 80+ character titles break out 14pp more often.</li></ul></div>
+<div><h4>Impact</h4><p>Restarting Shorts at 5 a day, at today's median performance, is worth <b>~1.1M extra views a month (about +54%)</b> on ET's current long-form base.</p><h4 class="mt">Recommendations</h4><ul><li>Cut 3–5 vertical clips a day from existing interviews.</li><li>Shift some geopolitics output to markets and personal finance, where ET already beats peers ~1.9×.</li><li>Default to 10–30 minute explainers with descriptive, quote-led titles.</li></ul></div>
+<div class="full figs"><figure><img src="p5_news_youtube/charts/shorts_per_week.png" alt="Shorts uploaded per week by channel"><figcaption>Shorts uploaded per week by channel</figcaption></figure><figure><img src="p5_news_youtube/charts/topic_supply_vs_demand.png" alt="Topic share of uploads vs share beating channel median"><figcaption>Topic share of uploads vs share beating channel median</figcaption></figure></div>
+<div class="full"><a class="btn" href="https://github.com/yashbh18/analytics-portfolio/tree/main/p5_news_youtube">View SQL, data &amp; outputs on GitHub ↗</a><p class="note">Note: One snapshot of about two weeks of uploads; topics are tagged by title keywords.</p></div>
+</div></details><details class="case">
+<summary><span class="idx">P/02</span><div><div class="kind mono">Experimentation · Excel</div><h3>A/B test design & readout, with a ship / no-ship call</h3><div class="tags">Power & sample size · z-test · confidence intervals · SRM check · guardrails · Bonferroni · Excel modelling</div></div><div class="big"><b>+7.3%</b><span>conversion lift</span></div><span class="plus">+</span></summary>
+<div class="body">
+<div><h4>Problem</h4><p>Does showing a delivery date and a "free returns" badge at checkout raise conversion without hurting refunds or basket size, and should we ship it?</p></div>
+<div><h4>Data</h4><p>A simulated 21-day checkout experiment with 231K sessions, clearly labelled as simulated, aggregated to 168 daily rows (day × arm × device × user type).</p></div>
+<div class="full"><h4>Approach</h4><ul><li>Sized the test: <b>77,062 sessions per arm</b> to detect an 8% relative lift on a 3.2% baseline, run for 3 full weeks.</li><li>Checked the traffic split with a chi-square <b>sample-ratio-mismatch</b> test.</li><li>Tested conversion and revenue per session with z-tests and 95% confidence intervals; tested refund rate and AOV as guardrails.</li><li>Cut by device and new vs returning users with Bonferroni-corrected significance, and checked for a novelty effect.</li><li>Everything is <b>289 live Excel formulas</b>, so changing an input recalculates the whole readout, including the written memo.</li></ul></div>
+<div><h4>Key findings</h4><ul><li>Conversion rose from 3.22% to 3.45%: <b>+7.3% (95% CI +2.7% to +11.8%, p = 0.002)</b>.</li><li>Revenue per session +5.5%; the traffic split was healthy (SRM p = 0.28).</li><li><b>Refund rate rose from 4.26% to 6.15%</b>: a guardrail breach (p = 0.0002).</li><li>The win is almost all <b>mobile (+12.0%, significant)</b>; desktop +1.6% is not significant.</li><li>No novelty effect: lift held or grew after day 3.</li></ul></div>
+<div><h4>Impact</h4><p>About <b>₹7.2M net a year</b> after reversed orders and refund handling, vs ₹12.0M gross. Decision: <b>ship to mobile only</b>, behind a flag, after re-testing without the free-returns badge.</p><h4 class="mt">Recommendations</h4><ul><li>Pull refund reasons for treatment orders.</li><li>Re-test with the delivery date only.</li><li>Monitor refund rate weekly after the mobile rollout.</li></ul></div>
+<div class="full figs"><figure><img src="p4_ab_test/charts/segment_lift.png" alt="Relative conversion lift by segment"><figcaption>Relative conversion lift by segment</figcaption></figure><figure><img src="p4_ab_test/charts/cumulative_lift.png" alt="Cumulative lift by day"><figcaption>Cumulative lift by day</figcaption></figure></div>
+<div class="full"><a class="btn" href="https://github.com/yashbh18/analytics-portfolio/tree/main/p4_ab_test">View SQL, data &amp; outputs on GitHub ↗</a><p class="note">Note: Simulated data, used to show the design and decision method.</p></div>
+</div></details><details class="case">
+<summary><span class="idx">P/03</span><div><div class="kind mono">Root cause · SQL</div><h3>Late deliveries & bad reviews: an e-commerce RCA</h3><div class="tags">Multi-table joins · CTEs · ROW_NUMBER / NTILE / RANK · lifecycle breakdown · seller scorecard · impact sizing</div></div><div class="big"><b>−20%</b><span>late orders</span></div><span class="plus">+</span></summary>
+<div class="body">
+<div><h4>Problem</h4><p>Review scores fell sharply in some months. What drives 1–2★ reviews, where in the order lifecycle does it start, who owns the fix, and what is it worth?</p></div>
+<div><h4>Data</h4><p>Public Olist Brazilian marketplace data: 96K delivered orders (2016–2018) across orders, customers, items, sellers and reviews.</p></div>
+<div class="full"><h4>Approach</h4><ul><li>Built one clean delivered-orders view with de-duplicated reviews and delivery vs promised date.</li><li>Split each order into approval → seller preparation → carrier transit.</li><li>Cut by state, seller decile, category and month; built a seller SLA scorecard.</li><li>Sized the fix in orders, reviews and GMV. 12 SQL queries.</li></ul></div>
+<div><h4>Key findings</h4><ul><li>Late orders get <b>54% bad reviews vs 9%</b> on time.</li><li>There is a cliff at 4 days late: 61–78% of reviews turn bad.</li><li>A late seller hand-over makes late delivery <b>3.8× likelier</b> (24.4% vs 6.5%).</li><li>The worst <b>30% of sellers cause 54%</b> of late orders.</li><li>CE, BA and RJ run 13–15% late vs 6% in SP; Black Friday and Feb–Mar 2018 were the worst months.</li></ul></div>
+<div><h4>Impact</h4><p>Fixing late seller hand-overs removes <b>~1,560 late orders (20%) and ~700 bad reviews</b>, protecting part of R$1.35M of late-order GMV.</p><h4 class="mt">Recommendations</h4><ul><li>Seller SLA alerts and a weekly scorecard; coach, then penalise the bottom decile.</li><li>Regional ETA buffers for peak months.</li><li>Proactive delay messages before an order crosses 4 days late.</li></ul></div>
+<div class="full figs"><figure><img src="p1_delivery_rca/charts/bad_reviews_by_delay.png" alt="Share of 1–2 star reviews by delivery delay"><figcaption>Share of 1–2 star reviews by delivery delay</figcaption></figure><figure><img src="p1_delivery_rca/charts/monthly_late_vs_review.png" alt="Monthly late rate vs average review"><figcaption>Monthly late rate vs average review</figcaption></figure></div>
+<div class="full"><a class="btn" href="https://github.com/yashbh18/analytics-portfolio/tree/main/p1_delivery_rca">View SQL, data &amp; outputs on GitHub ↗</a></div>
+</div></details><details class="case">
+<summary><span class="idx">P/04</span><div><div class="kind mono">Retention · SQL</div><h3>Cohorts, RFM segments & a sized win-back plan</h3><div class="tags">Cohort retention matrix · MIN() OVER · NTILE RFM scoring · CASE segmentation · CRM targeting · what-if sizing</div></div><div class="big"><b>R$309K</b><span>win-back value</span></div><span class="plus">+</span></summary>
+<div class="body">
+<div><h4>Problem</h4><p>Do acquired customers come back? Whom should CRM target first, and what is a win-back campaign worth?</p></div>
+<div><h4>Data</h4><p>Public Olist data: 93K unique customers and R$15.4M revenue.</p></div>
+<div class="full"><h4>Approach</h4><ul><li>Built a customer-orders view with each customer's order sequence and cohort month.</li><li>Measured repeat rate and time to second order; built a monthly cohort retention matrix.</li><li>Scored every customer on Recency and Monetary quintiles (NTILE) plus a repeat flag, mapped to 6 named segments.</li><li>Ranked first-purchase categories by repeat rate and sized a win-back campaign at 3%, 5% and 10%.</li></ul></div>
+<div><h4>Key findings</h4><ul><li>Only <b>3.0% of customers buy again</b>; repeat buyers bring 5.6% of revenue.</li><li>54% of second orders happen within 90 days.</li><li><b>At-risk high-value customers: 22% of the base, 40% of revenue</b>, averaging R$298.</li><li>Home, decor and bed/bath first purchases repeat 3× more than electronics.</li></ul></div>
+<div><h4>Impact</h4><p>Reactivating <b>5% of at-risk high-value customers once ≈ R$309K (+2.0% revenue)</b>; 10% ≈ R$618K.</p><h4 class="mt">Recommendations</h4><ul><li>Day 60–90 win-back flow with a hold-out group.</li><li>A second-order nudge inside 30 days for new high-value buyers.</li><li>Use home and decor as acquisition categories.</li></ul></div>
+<div class="full figs"><figure><img src="p2_cohort_rfm/charts/rfm_segments.png" alt="RFM segments: share of customers vs revenue"><figcaption>RFM segments: share of customers vs revenue</figcaption></figure><figure><img src="p2_cohort_rfm/charts/cohort_retention.png" alt="Monthly cohort retention"><figcaption>Monthly cohort retention</figcaption></figure></div>
+<div class="full"><a class="btn" href="https://github.com/yashbh18/analytics-portfolio/tree/main/p2_cohort_rfm">View SQL, data &amp; outputs on GitHub ↗</a></div>
+</div></details><details class="case">
+<summary><span class="idx">P/05</span><div><div class="kind mono">Revenue · SQL</div><h3>Revenue, category & payment deep-dive</h3><div class="tags">LAG month-over-month · rolling averages · YoY · Pareto with SUM OVER · instalment analysis · hypothesis testing</div></div><div class="big"><b>3.3×</b><span>AOV on 7+ instalments</span></div><span class="plus">+</span></summary>
+<div class="body">
+<div><h4>Problem</h4><p>Is revenue growth coming from more buyers or bigger baskets? Which categories and payment options matter, and does freight cost hurt reviews?</p></div>
+<div><h4>Data</h4><p>Public Olist data: 96K delivered orders, Jan 2017 to Aug 2018.</p></div>
+<div class="full"><h4>Approach</h4><ul><li>Monthly GMV, orders and AOV with MoM % and a 3-month rolling average.</li><li>Jan–Aug year-over-year comparison.</li><li>Category Pareto and H1 growth by category.</li><li>Payment mix and instalment bands vs basket size; freight share vs review score. 8 SQL queries.</li></ul></div>
+<div><h4>Key findings</h4><ul><li>GMV grew <b>2.4× YoY</b> (R$3.47M → R$8.45M), almost entirely from more buyers; <b>AOV stayed flat</b> at ~R$160.</li><li>GMV plateaued at R$1.0–1.1M a month from Jan 2018.</li><li>Top 7 categories make ~50% of revenue.</li><li>Orders on 7+ instalments are 16% of card orders but <b>32% of card GMV</b>, with AOV R$334 vs R$101.</li><li>Hypothesis rejected: freight share barely moves reviews.</li></ul></div>
+<div><h4>Impact</h4><p>Identified instalments as the <b>strongest untapped AOV lever</b> and showed delivery speed matters more than freight discounts.</p><h4 class="mt">Recommendations</h4><ul><li>Promote no-interest 6x/10x instalments on items above R$150, and A/B test it.</li><li>Shift acquisition budget to the fastest-growing categories.</li><li>Track a weekly GMV bridge: buyers × orders per buyer × AOV.</li></ul></div>
+<div class="full figs"><figure><img src="p3_revenue_deepdive/charts/installments_aov.png" alt="AOV by number of instalments"><figcaption>AOV by number of instalments</figcaption></figure><figure><img src="p3_revenue_deepdive/charts/category_pareto.png" alt="Category revenue Pareto"><figcaption>Category revenue Pareto</figcaption></figure></div>
+<div class="full"><a class="btn" href="https://github.com/yashbh18/analytics-portfolio/tree/main/p3_revenue_deepdive">View SQL, data &amp; outputs on GitHub ↗</a></div>
+</div></details>
 </div></section>
 
-<section id="projects"><div class="wrap">
-  <div class="sec-h"><span class="num mono">03</span><h2>Selected projects</h2></div>
-  <p class="sub">Self-initiated analyses on public or clearly labelled simulated data. Every query and output is on <a href="https://github.com/yashbh18/analytics-portfolio">GitHub</a>.</p>
-  <div class="grid">
-    <a class="proj" href="https://github.com/yashbh18/analytics-portfolio/tree/main/p5_news_youtube">
-      <img src="p5_news_youtube/charts/shorts_per_week.png" alt="Shorts uploaded per week by channel">
-      <div class="in"><div class="meta mono"><span>01 · Real data</span><span>SQL</span></div>
-      <h3>What wins on Indian business-news YouTube? ET vs 5 peers</h3>
-      <p>1,860 videos I collected across six channels. Channel-normalised performance index, topic supply vs demand, title and format analysis.</p>
-      <div class="res">ET posts ~1 Short a week vs 41–300 at peers; 5 a day ≈ +1.1M views a month</div></div></a>
-    <a class="proj" href="https://github.com/yashbh18/analytics-portfolio/tree/main/p4_ab_test">
-      <img src="p4_ab_test/charts/segment_lift.png" alt="Conversion lift by segment">
-      <div class="in"><div class="meta mono"><span>02 · Experimentation</span><span>Excel</span></div>
-      <h3>A/B test design &amp; readout, with a ship / no-ship call</h3>
-      <p>Sample size, z-test, confidence intervals, SRM check, guardrails, Bonferroni-corrected segments. 289 live formulas. <span class="badge">Simulated data</span></p>
-      <div class="res">+7.3% conversion, but a refund-rate breach, so mobile-only rollout (~₹7.2M net/yr)</div></div></a>
-    <a class="proj" href="https://github.com/yashbh18/analytics-portfolio/tree/main/p1_delivery_rca">
-      <img src="p1_delivery_rca/charts/bad_reviews_by_delay.png" alt="Bad reviews by delivery delay">
-      <div class="in"><div class="meta mono"><span>03 · Root cause</span><span>SQL</span></div>
-      <h3>Late deliveries &amp; bad reviews: an e-commerce RCA</h3>
-      <p>96K orders. Lifecycle breakdown, seller SLA scorecard and impact sizing in orders, reviews and GMV.</p>
-      <div class="res">30% of sellers cause 54% of late orders; fixing them cuts late orders 20%</div></div></a>
-    <a class="proj" href="https://github.com/yashbh18/analytics-portfolio/tree/main/p2_cohort_rfm">
-      <img src="p2_cohort_rfm/charts/rfm_segments.png" alt="RFM segments">
-      <div class="in"><div class="meta mono"><span>04 · Retention</span><span>SQL</span></div>
-      <h3>Cohorts, RFM segments &amp; a sized win-back plan</h3>
-      <p>93K customers. Cohort retention matrix, NTILE-based RFM scoring and CRM targeting.</p>
-      <div class="res">22% of customers hold 40% of revenue; a 5% win-back is worth ~R$309K</div></div></a>
-  </div>
-  <p class="note">Also on GitHub: <a href="https://github.com/yashbh18/analytics-portfolio/tree/main/p3_revenue_deepdive">Revenue, category &amp; payment deep-dive</a> (MoM/YoY, Pareto, instalments vs AOV).</p>
+<section id="cases"><div class="wrap">
+  <div class="sec-h"><span class="num mono">03</span><h2>Work case studies</h2></div>
+  <p class="sub">Real problems from my current role. The product is anonymised and internal numbers are rounded; the approach and outcomes are mine.</p>
+  <details class="case">
+<summary><span class="idx">C/01</span><div><h3>Selling more tickets for city running events</h3><div class="tags">Funnel analysis · A/B testing · referral design · ads efficiency · city strategy · new revenue streams</div></div><div class="big"><b>+10%</b><span>landing → registration</span></div><span class="plus">+</span></summary>
+<div class="body"><div><h4>Problem</h4><ul><li>Ticket sales for running events in <b>4 metro cities</b> needed to grow, and conversion from landing to registration was low.</li><li>Paid ads were spending heavily without a clear view of which were working.</li></ul></div><div><h4>What I did</h4><ul><li>Mapped the full funnel and found the friction: a <b>long registration form, extra details asked too early and a clunky UI flow</b>.</li><li>Proposed a shorter, simpler flow and ran it as an <b>A/B test</b>.</li><li>Noticed most runners sign up <b>in groups</b>, so I designed a <b>referral plan</b> with a ticket-upgrade reward.</li><li>Analysed Meta and Google ads: <b>paused high-spend, low-return ads</b> and turned patterns from the winners into creative changes.</li><li>Investigated <b>payment-gateway failures</b> in the checkout funnel.</li><li>Built a <b>business dashboard</b> with daily updates and city-specific strategies and tests.</li></ul></div><div class="full"><h4>Impact</h4><ul><li><b>+10% landing-to-registration conversion</b> from the simplified flow, lifting total revenue.</li><li>The referral plan drove <b>more group registrations and revenue</b>.</li><li>Opened new revenue streams beyond tickets: <b>stalls, corporate tickets and sponsorships</b>.</li><li>Less ad spend wasted on poor performers.</li></ul></div></div></details><details class="case">
+<summary><span class="idx">C/02</span><div><h3>Growing online yoga subscriptions</h3><div class="tags">Page & funnel redesign · pricing · international expansion</div></div><div class="big"><b>+5%</b><span>funnel conversion</span></div><span class="plus">+</span></summary>
+<div class="body"><div><h4>Problem</h4><ul><li>Online yoga classes sold as 1-month, 3-month and 1-year plans. The goal was more subscriptions and more revenue.</li><li>Users only saw plans and prices <b>after</b> submitting a lead form, so many dropped off before seeing the value.</li></ul></div><div><h4>What I did</h4><ul><li>Analysed the funnel step by step and proposed showing <b>plans directly on the page</b>, before the lead form.</li><li>Proposed selling yoga plans to an <b>international audience at a higher price point</b>.</li></ul></div><div class="full"><h4>Impact</h4><ul><li><b>+5% conversion</b> after moving plans ahead of the lead form.</li><li>International pricing added a <b>higher-AOV revenue stream</b>.</li></ul></div></div></details><details class="case">
+<summary><span class="idx">C/03</span><div><h3>Building trust and new markets for diet plans</h3><div class="tags">Lead generation · go-to-market · international pricing</div></div><div class="big"><b>50%+</b><span>net GTV growth</span></div><span class="plus">+</span></summary>
+<div class="body"><div><h4>Problem</h4><ul><li>Dietitian-led diet plans (consultation call plus 1/3/6/12-month plans). The brand was new and unknown, so trust and leads were the bottleneck.</li></ul></div><div><h4>What I did</h4><ul><li>Proposed <b>free webinars</b> to generate leads, build trust and then sell plans.</li><li>Proposed launching <b>online diet plans in international markets</b> such as the UAE and Singapore at higher rates.</li></ul></div><div class="full"><h4>Impact</h4><ul><li>Webinars generated <b>₹5 lakh in revenue</b>.</li><li>International plans grew the business by <b>more than 50% in net GTV</b>.</li></ul></div></div></details><details class="case">
+<summary><span class="idx">C/04</span><div><h3>Targeting the right users with a propensity model</h3><div class="tags">Propensity scoring · segmentation · marketing efficiency · payment RCA</div></div><div class="big"><b>₹40L+</b><span>revenue impact (all RCAs)</span></div><span class="plus">+</span></summary>
+<div class="body"><div><h4>Problem</h4><ul><li>Marketing and CRM effort was spread evenly across users, and revenue was leaking at payment.</li></ul></div><div><h4>What I did</h4><ul><li>Built a <b>propensity model</b> to score users on how likely they were to buy, so campaigns could focus on the highest-intent users.</li><li>Ran root-cause analyses on <b>payment failures and funnel drop-offs</b> across products, channels and segments.</li></ul></div><div class="full"><h4>Impact</h4><ul><li>Root-cause fixes across the funnel and payments delivered <b>₹40L+ revenue impact</b>.</li></ul></div></div></details>
 </div></section>
 
 <section id="experience"><div class="wrap">
   <div class="sec-h"><span class="num mono">04</span><h2>Experience</h2></div>
   <div class="job"><div class="when mono">May 2026 — Now</div><div>
-    <h3>Product / Data Analyst</h3><div class="co">Times Internet · The Economic Times</div>
-    <ul><li>Own funnel, growth and product analytics for a health &amp; wellness platform (events, yoga, diet).</li><li>Root-cause analyses on payment failures and drop-offs drove <b>₹40L+ revenue impact</b>.</li><li>Designed A/B tests on UX, conversion blockers and plan presentation; built a propensity model for targeting.</li><li>Automated recurring reporting with SQL, BigQuery and Apps Script; built an LLM-powered workflow for exploring transaction data.</li></ul>
-    <div class="stack">SQL · BigQuery · GA4 · Looker Studio · Meta &amp; Google Ads · Apps Script</div></div></div>
+    <h3>Product / Data Analyst</h3><div class="co">Times Internet · The Economic Times</div><ul><li>Own funnel, growth and product analytics for a health &amp; wellness platform (city running events, online yoga and diet subscriptions), working on website and product improvements, product strategy and growth.</li><li>Built an end-to-end analytics framework linking acquisition, registration, plan selection, payment and purchase funnels to revenue across products, channels and user segments.</li><li>Led hypothesis-driven root-cause analyses on payment failures, funnel drop-offs, campaign performance and tracking discrepancies, supporting <b>₹40L+ revenue impact</b>.</li><li>Designed and evaluated A/B tests on UX changes, conversion blockers, plan presentation and user nudges, including the registration flow that lifted landing-to-registration conversion <b>+10%</b>.</li><li>Analysed Meta, Google, telecalling and WhatsApp acquisition funnels and ROAS; paused under-performing high-spend ads and fed winning patterns back into creatives.</li><li>Shaped product and pricing strategy: referral plans for group sign-ups, international plans at higher price points (<b>50%+ net GTV growth</b> for diet) and webinar-led lead generation (<b>₹5L revenue</b>).</li><li>Proposed new revenue streams for events (stalls, corporate tickets, sponsorships) and city-specific strategies and tests.</li><li>Built a propensity model to prioritise high-intent users for campaigns and CRM.</li><li>Automated recurring business reporting with SQL, BigQuery, GA4, Apps Script and dashboards; built an LLM-powered workflow for natural-language exploration of daily transaction data.</li></ul>
+    <div class="stack">SQL · BigQuery · GA4 · Looker Studio · Power BI · Meta &amp; Google Ads · Apps Script · LLM tools</div></div></div>
   <div class="job"><div class="when mono">May 2024 — May 2026</div><div>
-    <h3>Associate Team Lead, CRO</h3><div class="co">Convertcart</div>
-    <ul><li>Ran conversion optimisation for <b>60+ global e-commerce brands</b> (Shopify, Magento, BigCommerce).</li><li>4–6 A/B and multivariate tests a month for <b>10%+ conversion growth</b>.</li><li>Built 20+ Looker Studio and Power BI dashboards; managed $5K–15K MRR accounts with 96% client retention; led a team of 2.</li></ul>
-    <div class="stack">GA4 · VWO · Microsoft Clarity · Heatmaps · Looker Studio · Power BI · Figma</div></div></div>
+    <h3>Associate Team Lead, CRO</h3><div class="co">Convertcart</div><ul><li>Owned conversion-rate optimisation and product analytics for <b>60+ global e-commerce accounts</b> (Shopify, Magento, BigCommerce), analysing customer journeys, funnel performance and revenue opportunities.</li><li>Designed and evaluated <b>4–6 A/B and multivariate tests every month</b> across landing pages, product pages and checkout flows, achieving <b>10%+ conversion growth</b>.</li><li>Used GA4, SQL, heatmaps and session recordings to diagnose behaviour patterns, conversion barriers and drop-offs.</li><li>Built <b>20+ Looker Studio and Power BI dashboards</b> to monitor conversion, revenue, customer behaviour and experiment performance.</li><li>Presented data-backed growth priorities to senior client stakeholders; managed enterprise accounts worth <b>$5K–$15K MRR</b> with <b>96% client retention</b>.</li><li>Led a team of 2 and coordinated Product, Design, Development, QA and Customer Success from hypothesis to launch and final recommendations.</li><li>Won the <b>Best BA Award (Dec 2025)</b> and Star of the Month.</li></ul>
+    <div class="stack">GA4 · SQL · VWO · Microsoft Clarity · Heatmaps · Looker Studio · Power BI · Figma</div></div></div>
+  <div class="job"><div class="when mono">2018 — 2021</div><div>
+    <h3>BSc Physical Science</h3><div class="co">Gargi College, University of Delhi</div><ul><li>CGPA 9.13 / 10</li></ul></div></div>
 </div></section>
 
 <section id="toolkit"><div class="wrap">
@@ -258,18 +270,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   </div>
 </div></section>
 
-<section id="recognition"><div class="wrap">
-  <div class="sec-h"><span class="num mono">06</span><h2>Recognition</h2></div>
-  <div class="rec">
-    <div><b>Best BA Award</b><span>Convertcart · Dec 2025</span></div>
-    <div><b>Star of the Month</b><span>Convertcart</span></div>
-    <div><b>9.13 / 10 CGPA</b><span>BSc Physical Science · Gargi College, DU</span></div>
-  </div>
-</div></section>
-
 <section id="contact" class="contact"><div class="wrap">
-  <div class="sec-h"><span class="num mono">07 — Contact</span></div>
-  <h2>Let's fix a<br>funnel<span>.</span></h2>
+  <div class="sec-h"><span class="num mono">06</span><h2>Get in touch</h2></div>
   <p>Open to product, data, business and decision analyst roles in Delhi NCR or remote. Email is the fastest way to reach me.</p>
   <div class="links">
     <a href="mailto:yashikabhatia1800@gmail.com">yashikabhatia1800@gmail.com ↗</a>
@@ -280,7 +282,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </main>
 <footer><div class="wrap mono"><span>© 2026 Yashika Bhatia</span><span>Delhi NCR, India</span></div></footer>
 <script>
-(function(){var el=document.getElementById('clock');function t(){try{el.textContent=new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:false})+' IST'}catch(e){}}t();setInterval(t,30000)})();
+(function(){var el=document.getElementById('clock');function t(){try{el.textContent=new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:false})+' IST'}catch(e){}}t();setInterval(t,30000);
+document.getElementById('theme').addEventListener('click',function(){var n=document.documentElement.dataset.theme==='light'?'dark':'light';document.documentElement.dataset.theme=n;try{localStorage.setItem('theme',n)}catch(e){}});})();
 </script>
-</body>
-</html>
+</body></html>
